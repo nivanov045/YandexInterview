@@ -9,7 +9,6 @@ int main() {
   size_t numOfEls;
   in >> numOfEls;
 
-  //std::set<int> result;
   if (numOfEls == 0)
     return 0;
   int lastNum;
