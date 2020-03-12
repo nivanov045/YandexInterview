@@ -1,3 +1,4 @@
+// Check strings: are they anagrams
 #include <fstream>
 #include <algorithm>
 #include <string>
