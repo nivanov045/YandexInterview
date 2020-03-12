@@ -1,3 +1,4 @@
+// Generate all correct brackets sequences by number of brackets.
 #include <fstream>
 #include <algorithm>
 #include <string>
