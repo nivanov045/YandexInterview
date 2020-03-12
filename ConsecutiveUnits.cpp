@@ -1,3 +1,4 @@
+// Task: calculate max number of consecutive ones
 #include <fstream>
 #include <algorithm>
 
