@@ -1,3 +1,4 @@
+// Task: remove duplicated elements, which together.
 #include <fstream>
 #include <algorithm>
 #include <set>
