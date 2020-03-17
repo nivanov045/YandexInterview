@@ -1,3 +1,4 @@
+// Task: given an integer array without duplicates, return the summary of its ranges.
 #include <fstream>
 #include <algorithm>
 #include <string>
@@ -37,9 +38,9 @@ int main() {
   cout << summaryRanges(v) << endl;
   v = { 0 };
   cout << summaryRanges(v) << endl;
-  v = { 0,1,2,3 };
+  v = { 3,0,1,2 };
   cout << summaryRanges(v) << endl;
-  v = { 0, 4,5,6 };
+  v = { 6, 4,5,0 };
   cout << summaryRanges(v) << endl;
   system("pause");
 }
