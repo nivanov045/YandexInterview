@@ -1,7 +1,8 @@
 // Task: is exist vertical axis of symmetry, which devided array of 2D-points
 
 #include <utility>
-#include <unordered_map>
+#include <set>
+#include <vector>
 #include <iostream>
 #include <algorithm>
 
@@ -13,9 +14,26 @@ struct Point {
   int y;
 };
 
+bool operator==(const Point& left, const Point& right) {
+  return left.x == right.x && left.y == right.y;
+}
+
 bool isExist(const std::vector<Point>& iPoints) {
-  //find min, max by x -> get possible axis coord
-  //check for all points existing of symmetry point
+  if (iPoints.empty())
+    return true;
+  int xMin = iPoints[0].x, xMax = iPoints[0].x;
+  for (const auto& p : iPoints) {
+    xMax = max(xMax, p.x);
+    xMin = min(xMin, p.x);
+  }
+  auto axisX = xMax + xMin;
+  for (const auto& p : iPoints) {
+    Point symPoint(axisX - p.x, p.y);
+    if (find(iPoints.begin(), iPoints.end(), symPoint) == iPoints.end()) {
+      return false;
+    }
+  }
+  return true;
 }
 
 int main() {
